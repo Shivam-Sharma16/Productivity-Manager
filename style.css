@@ -1,7 +1,37 @@
+:root{
+   --pri: #FF90BB;
+   --sec: #FFC1DA;
+   --ter: #F8F8E1;
+   --qua:#8ACCD5;   
+}
+
+@font-face {
+    font-family: aeonik;
+    src: url(./fonts/AeonikTRIAL-Bold.otf);
+    font-weight: 800;
+    
+}
+@font-face {
+    font-family: aeonik;
+    src: url(./fonts/AeonikTRIAL-Light.otf);
+    font-weight: 300;
+    
+}
+@font-face {
+    font-family: aeonik;
+    src: url(./fonts/AeonikTRIAL-Regular.otf);
+    font-weight: 500;
+    
+}
+
+
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family: aeonik;
+    font-weight: 500;
 }
 html,
 body {
