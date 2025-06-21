@@ -1,8 +1,10 @@
 :root{
    --pri: #FF90BB;
    --sec: #FFC1DA;
-   --ter: #F8F8E1;
+   --ter: #e1e1ba;
    --qua:#8ACCD5;   
+   --black:black;
+   --white:white;
 }
 
 @font-face {
@@ -32,9 +34,104 @@
     box-sizing:border-box;
     font-family: aeonik;
     font-weight: 500;
+    /* background-color: var(--ter); */
+    color:var(--black)
+    
 }
 html,
 body {
       height:100%;
       width:100%;
+}
+.section{
+    width: 100%;
+    padding: 2rem;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: var(--sec);
+    border-radius: 1rem;
+
+}
+nav button{
+    background-color: var(--white);
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+    border-radius:1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all ease 0.1s;
+
+    
+
+}
+nav button:active{
+        scale: 0.97;
+    }
+   
+nav h1{
+    background-color: transparent;
+    font-size: 2rem;
+    font-weight: 800;
+    /* display: inline; */
+}
+
+.section .main-page{
+width: 100%;
+
+display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: var(--sec);
+    border-radius: 1rem;
+margin-top: 2rem;
+}
+
+.section .main-page .date{
+    width: 80%;
+    /* background-color: antiquewhite; */
+    h1{
+        font-size: 5.5rem;
+        font-weight: 800;
+        margin-bottom: 3rem;
+
+    }
+    h3{
+        font-size: 2rem;
+        font-weight: 300;
+
+    }
+    h4{
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+}
+.section .main-page .weather{
+    width: 20%;
+    padding-left: 3rem;
+   
+    /* text-align: center; */
+    h2{
+        font-size: 4rem;
+        font-weight: 800;
+        
+
+    }
+    h3{
+        font-size: 2.3rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+
+    }
+    h4{
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
 }
