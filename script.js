@@ -92,3 +92,27 @@ function weatherApiCall() {
 }
 
 weatherApiCall();
+
+function openCloseFeature(){
+  let allElems = document.querySelectorAll(".allelems .elems");
+let Elems = document.querySelectorAll(".elem-pages");
+let close = document.querySelectorAll(".close");
+
+allElems.forEach((elem, idx) => {
+  elem.addEventListener("click", function () {
+    
+    Elems[idx].style.display = "block";
+  });
+});
+
+
+
+close.forEach(function (back,idx) {
+        back.addEventListener('click', function () {
+            Elems[idx].style.display = 'none'
+        })
+    })
+
+}
+
+openCloseFeature()
