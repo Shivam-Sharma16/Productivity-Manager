@@ -81,7 +81,7 @@ function weatherApiCall() {
       `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`
     );
     data = await response.json();
-    console.log(data);
+    
     degree.innerHTML = `${data.current.temp_c} °C`;
     lig.innerHTML = `${data.current.condition.text}`;
     hum.innerHTML = `Humidity: ${data.current.humidity}%`;
@@ -116,3 +116,61 @@ close.forEach(function (back,idx) {
 }
 
 openCloseFeature()
+ 
+
+
+var motivation_object=[
+  {
+  quotes:'The only way to do great work is to love what you do.',
+  authors:'Steve Jobs'
+},
+ {
+  quotes:'Success is not final, failure is not fatal: It is the courage to continue that counts.',
+  authors:'Winston Churchill'
+} ,
+{
+  quotes:"Believe you can and you're halfway there.",
+  authors:'Theodore Roosevelt'
+} ,
+{
+  quotes:"Don't watch the clock; do what it does. Keep going.",
+  authors:'Sam Levenson'
+},
+{
+  quotes:"The future belongs to those who believe in the beauty of their dreams.",
+  authors:'Eleanor Roosevelt'
+},
+{
+  quotes:"Start where you are. Use what you have. Do what you can.",
+  authors:'Arthur Ashe'
+},
+{
+  quotes:"Hardships often prepare ordinary people for an extraordinary destiny.",
+  authors:'C.S. Lewis'
+},
+{
+  quotes:"It does not matter how slowly you go as long as you do not stop.",
+  authors:'Confucius'
+},
+{
+  quotes:"Your time is limited, so don't waste it living someone else's life.",
+  authors:'Steve Jobs'
+},
+{
+  quotes:"Success usually comes to those who are too busy to be looking for it.",
+  authors:'Henry David Thoreau'
+},
+]
+var quote=document.querySelector('.quote')
+var author=document.querySelector('.author')
+var moti=document.querySelector('.moti')
+
+moti.addEventListener('click',function(){
+  let number=Math.floor(Math.random()*10)
+  console.log(number);
+  
+quote.innerHTML=`${motivation_object[number].quotes}`
+author.innerHTML=` by- ${motivation_object[number].authors}`
+})
+
+
